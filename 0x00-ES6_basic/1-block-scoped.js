@@ -4,7 +4,7 @@ export default function taskBlock(trueOrFalse) {
 
     if (trueOrFalse) {
         task = true;
-        tasks = false;
+        task2 = false;
     }
 
     return [task, task2];
