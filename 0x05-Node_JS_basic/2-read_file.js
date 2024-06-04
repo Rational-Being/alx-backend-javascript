@@ -23,27 +23,29 @@ function countStudents(file) {
 
     console.log(`Number of students: ${students.length}`);
 
-    const counts = {};
-    const lists = {};
+    const csStudents = students.filter((student) => student.field === 'CS').map((student) => student.firstname);
+    const sweStudents = students.filter((student) => student.field === 'SWE').map((student) => student.firstname);
 
-    for (const student of students) {
-      if (!counts[student.field]) {
-        counts[student.field] = 0;
-        lists[student.field] = [];
-      }
-      counts[student.field] += 1;
-      lists[student.field].push(student.firstname);
-    }
-    
-    // console.log(counts)
-    // console.log(`Number of students in ${counts[0]}. ${counts[0]}. List: ${lists[0].join(', ')}`);
-    // console.log(`Number of students in ${counts[1]}. ${counts[1]}. List: ${lists[1].join(', ')}`);
+    console.log(`Number of students in CS: ${csStudents.length}. List: ${csStudents.join(', ')}`);
+    console.log(`Number of students in SWE: ${sweStudents.length}. List: ${sweStudents.join(', ')}`);
 
-    for (const field in counts) {
-      // if (Object.hasOwn(counts, field)) {
-      console.log(`Number of students in ${field}. ${counts[field]}. List: ${lists[field].join(', ')}`);
-      // }
-    }
+    // const counts = {};
+    // const lists = {};
+
+    // for (const student of students) {
+    //   if (!counts[student.field]) {
+    //     counts[student.field] = 0;
+    //     lists[student.field] = [];
+    //   }
+    //   counts[student.field] += 1;
+    //   lists[student.field].push(student.firstname);
+    // }
+
+    // for (const field in counts) {
+    //   // if (Object.hasOwn(counts, field)) {
+    // console.log(` ${field}. ${counts[field]}. List: ${lists[field].join(', ')}`);
+    //   // }
+    // }
   } catch (error) {
     console.error('Cannot load the batabase');
   }
