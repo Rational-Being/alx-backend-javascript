@@ -36,9 +36,9 @@ function countStudents(file) {
     }
 
     for (const field in counts) {
-      if (Object.hasOwn(counts, field)) {
+      // if (Object.hasOwn(counts, field)) {
         console.log(`Number of students in ${field}: ${counts[field]}. List: ${lists[field].join(', ')}`);
-      }
+      // }
     }
   } catch (error) {
     console.error('Cannot load the batabase');
