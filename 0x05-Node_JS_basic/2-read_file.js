@@ -35,9 +35,13 @@ function countStudents(file) {
       lists[student.field].push(student.firstname);
     }
     
+    // console.log(counts)
+    // console.log(`Number of students in ${counts[0]}. ${counts[0]}. List: ${lists[0].join(', ')}`);
+    // console.log(`Number of students in ${counts[1]}. ${counts[1]}. List: ${lists[1].join(', ')}`);
+
     for (const field in counts) {
       // if (Object.hasOwn(counts, field)) {
-      console.log(`Number of students in ${field}: ${counts[field]}. List: ${lists[field].join(', ')}`);
+      console.log(`Number of students in ${field}. ${counts[field]}. List: ${lists[field].join(', ')}`);
       // }
     }
   } catch (error) {
