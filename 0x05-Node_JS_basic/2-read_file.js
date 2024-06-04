@@ -1,4 +1,4 @@
-//this is script reads a file synchronusly with nodejs 
+// this is script reads a file synchronusly with nodejs
 
 const fs = require('fs');
 
@@ -36,7 +36,9 @@ function countStudents(file) {
     }
 
     for (const field in counts) {
-      console.log(`Number of students in ${field}: ${counts[field]}. List: ${lists[field].join(', ')}`);
+      if (Object.hasOwn(counts, field)) {
+        console.log(`Number of students in ${field}: ${counts[field]}. List: ${lists[field].join(', ')}`);
+      }
     }
   } catch (error) {
     console.error('Cannot load the batabase');
