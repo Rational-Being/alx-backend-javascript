@@ -7,6 +7,8 @@ function countStudents(file) {
     const input = fs.readFileSync(file, 'utf-8');
     const lines = input.toString().split('\n');
     const header = lines[0].split(',');
+    // if (header.length === 0) throw new Error('Cannot load the database');
+
     const students = [];
 
     for (let i = 1; i < lines.length; i += 1) {
@@ -47,7 +49,7 @@ function countStudents(file) {
     //   // }
     // }
   } catch (error) {
-    console.error('Cannot load the batabase');
+    throw new Error('Cannot load the batabase');
   }
 }
 
