@@ -6,7 +6,7 @@ const app = http.createServer((req, res) => {
 
   res.writeHead(200);
 
-  res.end('Hello holberton School!');
+  res.end('Hello Holberton School!');
 });
 
 module.exports = app;
