@@ -34,10 +34,10 @@ function countStudents(file) {
       counts[student.field] += 1;
       lists[student.field].push(student.firstname);
     }
-
+    
     for (const field in counts) {
       // if (Object.hasOwn(counts, field)) {
-        console.log(`Number of students in ${field}: ${counts[field]}. List: ${lists[field].join(', ')}`);
+      console.log(`Number of students in ${field}: ${counts[field]}. List: ${lists[field].join(', ')}`);
       // }
     }
   } catch (error) {
