@@ -1,6 +1,8 @@
-let expect = require('chai');
+let expect = require('chai')
+// const { expect } = require('chai');
+// import { expect } from 'chai';
 const calculateNumber = require('./2-calcul_chai');
-expect = expect.expect;
+// expect = expect.expect;
 
 describe('calculateNumber', () => {
     it('test sum of two rounded numbers', () => {
@@ -34,4 +36,4 @@ describe('calculateNumber', () => {
     it('dividing with zero', () => {
         expect(calculateNumber('DIVIDE', 0, 74)).to.equal(0);
     });  
-})
+});
