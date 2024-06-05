@@ -2,9 +2,9 @@
   "name": "0x06-unittests_in_js",
   "version": "1.0.0",
   "description": "In this learning, I will learn the following",
-  "main": "1-calcul.js",
+  "main": "index.js",
   "scripts": {
-    "test": "mocha *.test.js"
+    "test": "./node_modules/mocha/bin/mocha.js"
   },
   "keywords": [],
   "author": "",
@@ -12,6 +12,7 @@
   "devDependencies": {
     "chai": "^5.1.1",
     "mocha": "^10.4.0",
+    "request": "^2.88.2",
     "sinon": "^18.0.0"
   },
   "dependencies": {
