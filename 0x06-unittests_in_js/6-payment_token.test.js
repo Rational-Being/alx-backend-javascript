@@ -1,50 +1,13 @@
-const assert = require('assert');
-const calculateNumber = require('./0-calcul')
+const { expect } = require('chai');
+const getPaymentTokenFromAPI = require('./6-payment_token');
 
-describe('calculateNumber', () => {
-    it('', () => {
-        assert.(calculateNumber(), );
+
+describe ('getPaymentTokenFromAPI Function test', () => {
+    it('return response where success == true', (done) => {
+        getPaymentTokenFromAPI(true)
+        .then((response) => {
+            expect(response).to.deep.equal({data: "Successful responseponse from the API"});
+            done();
+        });
     });
-    
-    it('', () => {
-        assert.(calculateNumber(), );
-    });
-    
-    it('', () => {
-        assert.(calculateNumber(), );
-    });
-    
-    it('', () => {
-        assert.(calculateNumber(), );
-    });
-    
-    it('', () => {
-        assert.(calculateNumber(), );
-    });
-    
-    it('', () => {
-        assert.(calculateNumber(), );
-    });
-    
-    it('', () => {
-        assert.(calculateNumber(), );
-    });
-    
-    it('', () => {
-        assert.(calculateNumber(), );
-    });
-    
-    it('', () => {
-        assert.(calculateNumber(), );
-    });
-    
-    it('', () => {
-        assert.(calculateNumber(), );
-    });
-    
-    it('', () => {
-        assert.(calculateNumber(), );
-    });
-    
-    
-})
+});

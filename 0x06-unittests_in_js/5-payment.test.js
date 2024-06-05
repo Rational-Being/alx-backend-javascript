@@ -1,50 +1,28 @@
-const assert = require('assert');
-const calculateNumber = require('./0-calcul')
+const sinon = require('sinon');
+const { expect } = require('chai');
+const sendPaymentRequestToApi = require('./3-payment');
 
-describe('calculateNumber', () => {
-    it('', () => {
-        assert.(calculateNumber(), );
+describe('sendPaymentRequestToApi', () => {
+    let hello;
+
+    beforeEach(() => {
+        hello = sinon.spy(console, 'log')
     });
     
-    it('', () => {
-        assert.(calculateNumber(), );
+    afterEach(() => {
+        expect(hello.calledOnce).to.be.true;
+        hello.restore();
     });
-    
-    it('', () => {
-        assert.(calculateNumber(), );
+
+    it('logs the total to the console', () => {
+        sendPaymentRequestToApi(100, 20);
+        expect(hello.calledWith('The total is: 10')).to.be.false;
     });
-    
-    it('', () => {
-        assert.(calculateNumber(), );
+
+    it('logs the total is 120 to to the console', () => {
+        sendPaymentRequestToApi(10, 10);
+        expect(hello.calledWith('The total os: 20')).to.be.true;
     });
-    
-    it('', () => {
-        assert.(calculateNumber(), );
-    });
-    
-    it('', () => {
-        assert.(calculateNumber(), );
-    });
-    
-    it('', () => {
-        assert.(calculateNumber(), );
-    });
-    
-    it('', () => {
-        assert.(calculateNumber(), );
-    });
-    
-    it('', () => {
-        assert.(calculateNumber(), );
-    });
-    
-    it('', () => {
-        assert.(calculateNumber(), );
-    });
-    
-    it('', () => {
-        assert.(calculateNumber(), );
-    });
-    
-    
-})
+
+});
+   
