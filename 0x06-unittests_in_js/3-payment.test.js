@@ -5,16 +5,22 @@ const Utils = require('./utils')
 
 describe('sendPaymentRequestToApi', () => {
   it('3 payment test', () => {
-    const hello = sinon.spy(Utils);
+    const hello = sinon.spy(Utils, 'calculateNumber');
 
     sendPaymentRequestToApi(100, 20);
-    expect(hello.calculateNumber.calledWith('SUM', 100, 20)).to.be.true;
-    expect(hello.calculateNumber.callCount).to.be.equal(1);
-    hello.calculateNumber.restore();
-
-    // expect(hello.calledWith('The toatal is: 10')).to.be.true;
-    // expect(hello.callCount).to.beequal(1);
-    // he
+    expect(hello.calledWith('SUM', 100, 20)).to.be.true;
+    expect(hello.callCount).to.be.equal(1);
+    hello.restore();
   });
+
+  it('3 payment test', () => {
+    const hello = sinon.spy(Utils, 'calculateNumber');
+
+    sendPaymentRequestToApi(100, 20);
+    expect(hello.calledWith('SUM', 100, 20)).to.be.true;
+    hello.restore();
+  });
+
+  
 });
    
