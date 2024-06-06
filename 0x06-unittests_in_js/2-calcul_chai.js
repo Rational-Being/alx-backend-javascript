@@ -1,4 +1,5 @@
-function calculateNumber(type, a, b) {
+const calculateNumber = (type, a, b) => {
+// function calculateNumber(type, a, b) {
   if (type === 'SUM') {
     return Math.round(a) + Math.round(b);
   }
