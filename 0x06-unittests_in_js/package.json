@@ -4,13 +4,17 @@
   "description": "In this learning, I will learn the following",
   "main": "index.js",
   "scripts": {
-    "test": "./node_modules/mocha/bin/mocha.js"
+    "test": "./node_modules/mocha/bin/mocha.js",
+    "lint": "eslint --fix"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@eslint/js": "^9.4.0",
     "chai": "^5.1.1",
+    "eslint": "^9.4.0",
+    "globals": "^15.3.0",
     "mocha": "^10.4.0",
     "request": "^2.88.2",
     "sinon": "^18.0.0"
